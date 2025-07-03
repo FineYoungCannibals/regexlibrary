@@ -1,6 +1,6 @@
 # REgexlib
 
-Common regex and text classification utilities for our Airflow pipelines.
+Common regex and text classification utilities for our text processing pipelines.
 
 ## Usage
 
