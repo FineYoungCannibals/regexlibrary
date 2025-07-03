@@ -9,5 +9,5 @@ another
 ```python
 import myregexlib
 
-if myregexlib.is_phone("555-123-4567"):
-    print("Looks like a phone number")
+if myregexlib.is_uscan_phone("Name: Patrick Starfish Phone: 555-123-4567"):
+    print("String may contain a phone number")
