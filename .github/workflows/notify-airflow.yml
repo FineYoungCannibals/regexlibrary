@@ -1,0 +1,21 @@
+name: Notify DevAirflow of Changes
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'regexlib/**'
+
+jobs:
+  notify-devairflow:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger DevAirflow Build
+        run: |
+          curl -X POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer ${{ secrets.DEVAIRFLOW_PAT }}" \
+            https://api.github.com/repos/FineYoungCannibals/devairflow/dispatches \
+            -d '{"event_type":"regexlibrary_updated"}'
