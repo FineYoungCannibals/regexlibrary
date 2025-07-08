@@ -1,9 +1,6 @@
 from enum import Enum
 from .pattern import RegexPattern
 import re
-import re
-from enum import Enum
-from .pattern import RegexPattern
 
 class RegexLibrary(Enum):
     USCAN_PHONE = RegexPattern(
@@ -42,7 +39,7 @@ class RegexLibrary(Enum):
     )
 
     DL = RegexPattern(
-        r'[A-Z]{0,3}[0-9]+',
+        r'[A-Z]{0,3}[0-9]{6,11}',
         "Matches driver's license numbers with up to 3 letters followed by digits (case-insensitive).",
         flags=re.IGNORECASE
     )
@@ -60,5 +57,6 @@ class RegexLibrary(Enum):
 
     VBV = RegexPattern(
         r'[0-9]{4,8}',
-        "Matches Visa, Mastercard, and American Express 3DS / VBV."
+        "Matches Visa, Mastercard, and American Express 3DS / VBV.",
+        flags=re.IGNORECASE
     )
