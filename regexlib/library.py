@@ -57,3 +57,8 @@ class RegexLibrary(Enum):
         r'[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+',
         "Matches email addresses."
     )
+
+    VBV = RegexPattern(
+        r'[0-9]{4,8}',
+        "Matches Visa, Mastercard, and American Express 3DS / VBV."
+    )
