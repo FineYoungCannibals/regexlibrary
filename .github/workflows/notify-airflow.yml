@@ -1,4 +1,4 @@
-name: Notify DevAirflow of Changes
+name: Notify Airflow of Changes
 
 on:
   push:
